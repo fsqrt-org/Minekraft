@@ -6,7 +6,7 @@ kotlinx-coroutines = "1.10.2"
 adventure = "4.22.0"
 minecraft = "1.21.4"
 paper-userdev = "2.0.0-beta.18"
-luckperms = "5.4"
+luckperms = "5.5"
 
 [libraries]
 kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinx-datetime" }
