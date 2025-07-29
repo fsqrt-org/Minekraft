@@ -3,9 +3,6 @@ package org.fsqrt.minekraft
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import net.kyori.adventure.text.minimessage.MiniMessage
-import org.fsqrt.minekraft.text.AudienceData
-
-//import org.fsqrt.minekraft.text.AudienceData
 
 /**
  * The global [kotlinx.serialization.json] Instance
@@ -32,11 +29,3 @@ var json = Json {
  * To add custom behavior (eg tag resolvers), overwrite this instance with a custom one
  */
 var miniMessage = MiniMessage.miniMessage()
-
-/**
- * The Global [AudienceData]. This contains global colors, prefixes etc, which are used by Components across Minekraft
- * and projects using Minekraft
- *
- * @see AudienceData
- */
-val globalAudienceData: AudienceData = AudienceData()

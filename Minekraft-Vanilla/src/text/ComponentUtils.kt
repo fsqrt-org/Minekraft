@@ -3,17 +3,15 @@ package org.fsqrt.minekraft.text
 
 import net.kyori.adventure.audience.Audience
 import net.kyori.adventure.text.Component
-import net.kyori.adventure.text.Component.space
 import net.kyori.adventure.text.TextReplacementConfig
 import net.kyori.adventure.text.event.ClickEvent
 import net.kyori.adventure.text.format.TextColor
 import net.kyori.adventure.text.format.TextDecoration
 import net.kyori.adventure.text.format.TextDecoration.State
-import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer
-import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer
 import net.kyori.adventure.text.minimessage.MiniMessage
 import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver
-import org.fsqrt.minekraft.globalAudienceData
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer
+import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer
 import org.fsqrt.minekraft.miniMessage
 
 /**
@@ -169,13 +167,3 @@ fun Component.legacy() = LegacyComponentSerializer.legacy('§').serialize(this)
  * @since 0.0.1
  */
 fun Component.plain() = PlainTextComponentSerializer.plainText().serialize(this)
-
-/**
- * Creates a [Component] in the style of prefixes used for the Server
- * @param name The text which is put in the prefix
- * @return A [Component] in prefix style with [name] as text
- * @author Max Bossing
- * @since 0.0.1
- */
-fun prefixComponent(name: String = globalAudienceData.prefix) = text("[", globalAudienceData.cSecondary) + text(name, globalAudienceData.cHighlight) + text("]",
-    globalAudienceData.cSecondary) + space()
