@@ -92,6 +92,8 @@ class KListener<T : Event> : Listener {
      */
     var lifeTime: Duration = Duration.INFINITE
 
+    var onRegister: (() -> Unit)? = null
+
     /**
      * The [BukkitTask] used to cancel the [KListener]
      *
@@ -165,6 +167,7 @@ inline fun <reified T : Event> KListener<T>.register() {
     this.uses = 0
     task?.cancel()
     task = null
+    onRegister?.invoke()
     lifeTime
         .takeIf { it != Duration.INFINITE }
         ?.let {
