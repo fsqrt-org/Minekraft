@@ -15,7 +15,7 @@ subprojects {
     apply(plugin = "java-library")
 
     group = "org.fsqrt.minekraft"
-    version = "1.0.1"
+    version = "1.0.2"
 
     repositories {
         mavenCentral()
