@@ -5,7 +5,7 @@ kotlinx-serialization-json = "1.9.0"
 kotlinx-coroutines = "1.10.2"
 adventure = "4.23.0"
 minecraft = "1.21.4"
-paper-userdev = "2.0.0-beta.18"
+paper-userdev = "2.0.0-beta.19"
 luckperms = "5.5"
 
 [libraries]
